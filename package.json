@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "dev:tsx": "tsx src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "puppeteer": "^24.17.1",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^5.4.7",
+    "typescript": "^5.9.2"
+  }
+}

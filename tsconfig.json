@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "target": "ES2020",
+    "esModuleInterop": true,
+    "moduleResolution": "NodeNext",
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true
+  },
+  "include": ["src/**/*", "neqs_part6.js", "neqs_part5.js", "Scraping registre quebec (boucle liste)-2025-09-02.user.js", "tampermonkey.js", "neqs.js", "neqs_part5_sliced.js"],
+  "exclude": ["node_modules"]
+}
