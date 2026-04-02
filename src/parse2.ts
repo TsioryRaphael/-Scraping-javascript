@@ -1,8 +1,15 @@
 const fs = require("fs");
 const path = require("path");
 
+// Usage: node parse2.ts <input-file>
+const inputFile = process.argv[2];
+if (!inputFile) {
+  console.error("Erreur: aucun fichier d'entrée fourni.");
+  console.error("Usage: node parse2.ts <input-file>");
+  process.exit(1);
+}
+
 // Charger le tableau depuis un fichier JavaScript
-const inputFile = "./neq_list_20260401_105622.js"; // Remplace par le chemin de ton fichier JavaScript
 const content = fs.readFileSync(inputFile, "utf8");
 
 // Extraire la partie du tableau
@@ -15,7 +22,7 @@ const neqs = JSON.parse(arrayContent);
 
 console.log("Nombre total de NEQ :", neqs.length);
 
-const perFile = Math.ceil(neqs.length / 3); // NEQ par fichier (divisé en 2)
+const perFile = Math.ceil(neqs.length / 3); // NEQ par fichier (divisé en 3)
 const perLine = 10;
 
 for (let part = 0; part <3 ; part++) {
